@@ -3,6 +3,16 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+
+## [3.0.2] - 2026-06-14
+
+### Changed
+- cleaned up
+
+### Fixed
+- fixed appackage compatybility
+
+
 ## [3.0.1] - 2026-02-01
 
 ### Fixed
