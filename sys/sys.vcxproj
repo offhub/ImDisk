@@ -59,6 +59,7 @@
     <DriverType>WDM</DriverType>
     <TargetVersion>Windows10</TargetVersion>
     <_NT_TARGET_VERSION>0xA000008</_NT_TARGET_VERSION>
+    <Driver_SpectreMitigation>false</Driver_SpectreMitigation>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64EC'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
@@ -82,6 +83,7 @@
     <DriverType>WDM</DriverType>
     <TargetVersion>Windows10</TargetVersion>
     <_NT_TARGET_VERSION>0xA000008</_NT_TARGET_VERSION>
+    <Driver_SpectreMitigation>false</Driver_SpectreMitigation>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
@@ -97,6 +99,7 @@
     <DriverType>WDM</DriverType>
     <TargetVersion>Windows10</TargetVersion>
     <_NT_TARGET_VERSION>0x0A00</_NT_TARGET_VERSION>
+    <Driver_SpectreMitigation>false</Driver_SpectreMitigation>
   </PropertyGroup>
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <UseDebugLibraries>false</UseDebugLibraries>
@@ -105,6 +108,7 @@
     <DriverType>WDM</DriverType>
     <TargetVersion>Windows10</TargetVersion>
     <_NT_TARGET_VERSION>0x0A00</_NT_TARGET_VERSION>
+    <Driver_SpectreMitigation>false</Driver_SpectreMitigation>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -204,7 +208,14 @@
     </DriverSign>
     <ClCompile>
       <PreprocessorDefinitions>WIN9X_COMPAT_SPINLOCK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
     </ClCompile>
+    <Link>
+      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
+    </Link>
+    <Link>
+      <CETCompat>true</CETCompat>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <DriverSign>
@@ -228,12 +239,23 @@
     </DriverSign>
     <ClCompile>
       <PreprocessorDefinitions>WIN9X_COMPAT_SPINLOCK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
     </ClCompile>
+    <Link>
+      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
+    </Link>
+    <Link>
+      <CETCompat>true</CETCompat>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
       <PreprocessorDefinitions>WIN9X_COMPAT_SPINLOCK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
     </ClCompile>
+    <Link>
+      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64EC'">
     <ClCompile>
@@ -243,7 +265,11 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
       <PreprocessorDefinitions>WIN9X_COMPAT_SPINLOCK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
     </ClCompile>
+    <Link>
+      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'">
     <ClCompile>
