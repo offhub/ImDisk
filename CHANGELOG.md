@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+
+## [3.0.3] - 2026-06-15
+
+### Fixed
+- fixed windows 10 incompatybility introduced in 3.0.1
+
+
 ## [3.0.2] - 2026-06-14
 
 ### Changed
