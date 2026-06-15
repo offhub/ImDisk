@@ -58,7 +58,7 @@
     <ConfigurationType>Driver</ConfigurationType>
     <DriverType>WDM</DriverType>
     <TargetVersion>Windows10</TargetVersion>
-    <_NT_TARGET_VERSION>0x0A00</_NT_TARGET_VERSION>
+    <_NT_TARGET_VERSION>0xA000008</_NT_TARGET_VERSION>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64EC'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
@@ -81,7 +81,7 @@
     <ConfigurationType>Driver</ConfigurationType>
     <DriverType>WDM</DriverType>
     <TargetVersion>Windows10</TargetVersion>
-    <_NT_TARGET_VERSION>0x0A00</_NT_TARGET_VERSION>
+    <_NT_TARGET_VERSION>0xA000008</_NT_TARGET_VERSION>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
