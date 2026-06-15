@@ -63,11 +63,6 @@ files\driver\runwaitw.exe
 files\driver\uninstall_imdisk.cmd
 files\driver\uninstall_imdisk_new.cmd
 
-.Set DestinationDir=driver\awealloc\amd64
-files\driver\awealloc\amd64\awealloc.sys
-.Set DestinationDir=driver\awealloc\arm64
-files\driver\awealloc\arm64\awealloc.sys
-
 .Set DestinationDir=driver\cli\amd64
 files\driver\cli\amd64\imdisk.exe
 .Set DestinationDir=driver\cli\arm64
@@ -81,11 +76,6 @@ files\driver\cpl\amd64\imdisk.cpl
 files\driver\cpl\arm64\imdisk.cpl
 .Set DestinationDir=driver\cpl\i386
 files\driver\cpl\i386\imdisk.cpl
-
-.Set DestinationDir=driver\deviodrv\amd64
-files\driver\deviodrv\amd64\deviodrv.sys
-.Set DestinationDir=driver\deviodrv\arm64
-files\driver\deviodrv\arm64\deviodrv.sys
 
 .Set DestinationDir=driver\svc\amd64
 files\driver\svc\amd64\imdsksvc.exe
